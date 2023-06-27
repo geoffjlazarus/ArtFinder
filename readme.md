@@ -1,10 +1,11 @@
 # <ArtFinder>
 ArtFinder indexes various artists, artworks and movements. Navigate through our pages to discover new artists, their works and the groups they worked with.
 
+This repo is not yet functional and still WIP.
+
 # Screenshot
 
-<img src="url to your image on imgur">
-<img src="url to your image on imgur">
+
 
 # Technologies Used
 
