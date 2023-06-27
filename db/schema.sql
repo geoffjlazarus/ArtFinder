@@ -15,7 +15,7 @@ CREATE TABLE artists (
 
 CREATE TABLE artworks (
     id SERIAL PRIMARY KEY,
-    name TEXT,
+    title TEXT,
     artist TEXT,
     year TEXT,
     dimension_width INTEGER,
