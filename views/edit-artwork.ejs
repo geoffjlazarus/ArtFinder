@@ -1,0 +1,28 @@
+<h1>Edit Artwork</h1>
+  <form action="/artworks/<%= artwork.id %>/edit" method="POST">
+
+    <label for="">Title</label>
+    <input type="text" name="title" value="<%= artwork.title %>">
+    <label for="">Artist</label>
+    <input type="text" name="artist" value="<%= artwork.artist %>">
+    <label for="">Year</label>
+    <input type="number" name="year" value="<%= artwork.year %>">
+    <label for="">Dimension Width (cm)</label>
+    <input type="number" name="dimension_width" value="<%= artwork.dimension_width %>">
+    <label for="">Dimension Height (cm)</label>
+    <input type="number" name="dimension_height" value="<%= artwork.dimension_height %>">
+    <label for="">Medium</label>
+    <input type="text" name="medium" value="<%= artwork.medium %>">
+    <label for="">Genre</label>
+    <input type="text" name="genre" value="<%= artwork.genre %>">
+    <label for="">Description</label>
+    <input type="text" name="description" value="<%= artwork.description %>">
+    <label for="">Style</label>
+    <input type="text" name="style" value="<%= artwork.style %>">
+    <label for="">Image url</label>
+    <input type="text" name="artwork_image_url" value="<%= artwork.artwork_image_url %>">
+    <br>
+    
+    <button type="submit">Update</button>
+  </form>
+

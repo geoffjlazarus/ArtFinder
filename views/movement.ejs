@@ -1,0 +1,18 @@
+<h2>Movement details</h2>
+
+<h3><%= movement.name %></h3>
+<p><%= movement.years %></p>
+<p><%= movement.description %></p>
+
+Artists
+<p><%= movement.artists %></p>
+
+Nationalities
+<p><%= movement.nationalities %></p>
+
+<a href="/movements/<%= movement.id %>/edit">Edit movement</a>
+
+<form action="/movements/<%= movement.id %>" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Delete</button>
+</form>

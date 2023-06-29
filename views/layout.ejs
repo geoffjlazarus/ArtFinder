@@ -7,17 +7,27 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1><a href="/" id="logo">ArtFinder</a></h1>
-            <ul>
-                <li><a href="/artists">Artists</a></li>
-                <li><a href="/artworks">Artworks</a></li>
-                <li><a href="/movements">Movements</a></li>
-            </ul>
-        </nav>
-    </header>
+
+<nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo"><a href="/">ArtFinder</a></div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <li class="services">
+                <a href="/artists">artists</a>
+                <a href="/artworks">artworks</a>
+                <a href="/movements">movements</a>
+            </li>
+            <li><a href="/add">Add</a></li>
+        </div>
+    </ul>
+    </nav>
+
+
+    <%- body %>
     
-    <footer>&copy; 2023</footer>
+    <!-- <footer>&copy; 2023</footer> -->
 </body>
 </html>

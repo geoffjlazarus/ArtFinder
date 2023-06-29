@@ -1,0 +1,26 @@
+<h2>Edit artist</h2>
+
+<form action="/artists/<%= artist.id %>/edit" method="post">
+    <label for="">Firstname</label>
+    <input type="text" name="firstname" value="<%= artist.firstname %>">
+    <label for="">Lastname</label>
+    <input type="text" name="lastname" value="<%= artist.lastname %>">
+    <label for="">Birth year</label>
+    <input type="number" name="birth_year" value="<%= artist.birth_year %>">
+    <label for="">Death year</label>
+    <input type="number" name="death_year" value="<%= artist.death_year %>">
+    <label for="">Gender</label>
+    <input type="text" name="gender" value="<%= artist.gender %>">
+    <label for="">Biography</label>
+    <input type="text" name="biography" value="<%= artist.biography %>">
+    <label for="">Nationality</label>
+    <input type="text" name="nationality" value="<%= artist.nationality %>">
+    <label for="">Image url</label>
+    <input type="text" name="artist_image_url" value="<%= artist.artist_image_url %>">
+    <label for="">Movements</label>
+    <input type="text" name="movements" value="{<%= artist.movements %>}">
+    <br>
+    <button type="submit">Update</button>
+</form>
+
+

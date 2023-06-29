@@ -1,0 +1,19 @@
+<h2>Artist details</h2>
+
+<h3><%= artist.firstname %> <%= artist.lastname %></h3>
+<div class="display">
+    <img src="<%= artist.artist_image_url%>" alt="">
+</div>
+<p><%= artist.birth_year%>–<%= artist.death_year %>, 
+    <%= artist.nationality %></p>
+    <%= artist.gender %>
+<p>Movements: <%= artist.movements %></p>
+
+<p><%= artist.biography %></p>
+
+<a href="/artists/<%= artist.id %>/edit">Edit artist</a>
+
+<form action="/artists/<%= artist.id %>" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Delete</button>
+</form>

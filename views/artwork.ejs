@@ -1,0 +1,21 @@
+<h2>Artwork details</h2>
+
+<h3><%= artwork.title %> by <%= artwork.artist %></h3>
+<div class="display">
+    <img src="<%= artwork.artwork_image_url %>" alt="">
+</div>
+
+<p><%= artwork.description %></p>
+<p><%= artwork.year %></p>
+<p><%= artwork.dimension_height %> x <%= artwork.dimension_width %></p>
+
+<p><%= artwork.medium %></p>
+<p><%= artwork.genre %></p>
+<p><%= artwork.style %></p>
+
+<a href="/artworks/<%= artwork.id %>/edit">Edit artwork</a>
+
+<form action="/artworks/<%= artwork.id %>" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Delete</button>
+</form>

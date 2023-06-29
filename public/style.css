@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: tan;
+    margin: 0 auto;
+     max-width: 90%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    color: black;
+  }
+  
+  .nav-links a {
+    color: blue;
+  }
+  
+  /* LOGO */
+  .logo {
+    font-size: 32px;
+  }
+  
+
+  .display img {
+    display: block;
+    width: 50%;
+    margin:0 auto;
+    
+  }
+
+
+  /* NAVBAR MENU */
+  .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    
+  }
+  
+  .menu li:hover {
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .menu li {
+    padding: 5px 14px;
+    list-style-type: none;
+  }
+
+  .menu li a {
+    padding-right: 20px;
+  }
+  
+  /* DROPDOWN MENU */
+  .services {
+    position: relative; 
+  }
+  
+  .services:hover .dropdown {
+    display: block;
+  }
+
+
+
+
+
+
+header {
+    background-color: white;
+}
+
+header #logo {
+    float: left;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+}
+
+header nav li {
+    float: left;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.card {
+  /* width: 200px; */
+  background-color: white;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  margin-bottom: 10px;
+  overflow: hidden;
+  height:500px;
+}
+
+
+.card img {
+  display:block;
+  margin: 10px auto;
+  height: 300px;
+  /* width: 80%; */
+  min-width: fit-content;
+    /*display:block;
+    width: 70%; */
+    /* overflow: hidden; */
+}
+
+.container {
+    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap:20px;
+    justify-content: center;
+}
+
+
+
+form {
+  width: 1000px;
+}
+
+form label {
+  display: block;
+}
+
+input[type=text] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=number] {
+  width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+.movements-class {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.movements-class li {
+  padding: 20px;
+}
+
+/* .card img {
+    width: 100%;
+    display:block;
+}
+
+.card footer {
+    display: flex;
+    justify-content: space-between;
+} */

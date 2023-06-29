@@ -1,0 +1,22 @@
+<h2>Artworks</h2>
+
+<div class="container">
+<% for (let artwork of artworks) { %>
+    
+        <div class="card">
+            <img src="<%= artwork.artwork_image_url%>">
+            <section class="content">
+                <h2>
+                    <a href="/artworks/<%= artwork.id %> ">
+                        <%= artwork.title %> <%= artwork.year %>
+                    </a></h2>
+            </section>
+            <footer class="content">
+                <span><%= artwork.medium%> - <%=artwork.genre%></span>
+                <span><%= artwork.description%></span>
+            </footer>
+        </div>
+
+<%} %>
+
+    </div>

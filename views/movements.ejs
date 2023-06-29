@@ -1,0 +1,7 @@
+<h2>Movements</h2>
+
+<ul class="movements-class">
+  <% movements.forEach(movement => { %>
+    <li><a href="/movements/<%= movement.id %>"><%= movement.name %> </a> - <%= movement.description %></li>
+  <% }); %>
+</ul>

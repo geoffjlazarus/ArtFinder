@@ -1,0 +1,28 @@
+<h2>Artists</h2>
+
+
+<div class="container">
+<% for (let artist of artists) { %>
+    
+        <div class="card">
+            <img src="<%= artist.artist_image_url%>">
+            <section class="content">
+                <h2>
+                    <a href="/artists/<%= artist.id %>">
+                        <%= artist.firstname %> <%= artist.lastname %>
+                    </a></h2>
+            </section>
+            <footer class="content">
+                <span><%= artist.birth_year%> - <%=artist.death_year%></span>
+                <span><%= artist.nationality%></span>
+            </footer>
+        </div>
+
+<%} %>
+
+    </div>
+<!-- <ul>
+    <% artists.forEach(artist => { %>
+      <li><%= artist.firstname %> <%= artist.lastname %></li>
+    <% }); %>
+  </ul> -->
