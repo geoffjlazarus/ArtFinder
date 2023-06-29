@@ -43,6 +43,12 @@ CREATE TABLE movements (
   nationalities VARCHAR(255)[]
 );
 
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    email TEXT,
+    password_digest TEXT
+);
+
 
 -- Sample entries for the artists table
 INSERT INTO artists (firstname, lastname, birth_year, death_year, gender, biography, nationality, artist_image_url, movements)
