@@ -1,12 +1,11 @@
 const express = require('express')
 const app = express()
-//const port = process.env.PORT || 3000 
-const port = 3000
+const port = process.env.PORT || 3000 
+//const port = 3000
 const expressLayouts = require('express-ejs-layouts')
 const methodOverride = require('method-override')
 const router = express.Router();
-
-
+const session = require('express-session')
 
 const indexRouter = require('./routes/index')
 const artistsRouter = require('./routes/artists')
@@ -41,14 +40,14 @@ app.use('/movements', movementsRouter)
 
 
 
-// app.use(
-//     session({
-//         cookie: {maxAge: 1000 * 60 * 60 * 24 * 3},
-//         secret: process.env.SESSION_SECRET || "mistyrose",
-//         resave: false,
-//         saveUninitialized: true,
-//     })
-// );
+app.use(
+    session({
+        cookie: {maxAge: 1000 * 60 * 60 * 24 * 3},
+        secret: process.env.SESSION_SECRET || "mistyrose",
+        resave: false,
+        saveUninitialized: true,
+    })
+);
 
 
   
