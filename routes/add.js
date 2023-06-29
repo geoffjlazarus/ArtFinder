@@ -62,7 +62,7 @@ router.post('/artwork', (req, res) => {
 
 // Add Movement Route
 router.get('/movement', (req, res) => {
-res.render('add-movement');
+    res.render('add-movement');
 });
 
 router.post('/movement', (req, res) => {
