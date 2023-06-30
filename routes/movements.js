@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db')
 const methodOverride = require('method-override');
+const ensureLoggedIn = require('../middlewares/ensure_logged_in');
 
 router.use(methodOverride('_method'));
 
@@ -47,7 +48,7 @@ router.get('/', (req, res) => {
 
 
 // Edit Movement Route
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', ensureLoggedIn, (req, res) => {
     const movementId = req.params.id;
   
     // Query movement details

@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../db')
+const ensureLoggedIn = require('../middlewares/ensure_logged_in')
 
 router.get('/', (req,res) => {
     db.query(`SELECT * FROM artworks;`, (err, dbRes) => {
@@ -23,7 +24,41 @@ router.get('/', (req,res) => {
 //     });
 //   });
 
-router.post('/:id/edit', (req, res) => {
+
+  // Artwork Details Route
+  router.get('/:id', (req, res) => {
+    const artworkId = req.params.id;
+  
+    // Query artwork details
+    const artworkSql = `SELECT * FROM artworks WHERE id = $1;`;
+    db.query(artworkSql, [artworkId], (err, artworkDbRes) => {
+      if (err) {
+        console.log(err);
+      }
+      const artwork = artworkDbRes.rows[0];
+  
+      res.render('artwork', { artwork });
+    });
+  });
+  
+ // Edit Artwork Route
+ router.get('/:id/edit', ensureLoggedIn, (req, res) => {
+  const artworkId = req.params.id;
+
+  // Query artwork details
+  const artworkSql = `SELECT * FROM artworks WHERE id = $1;`;
+  db.query(artworkSql, [artworkId], (err, artworkDbRes) => {
+    if (err) {
+      console.log(err);
+    }
+    const artwork = artworkDbRes.rows[0];
+
+    res.render('edit-artwork', { artwork });
+  });
+});
+
+
+router.post('/:id/edit', ensureLoggedIn, (req, res) => {
     const artworkId = req.params.id;
     const { title, artist, year, dimension_width, dimension_height, medium, genre, description, style, artwork_image_url } = req.body;
 
@@ -46,38 +81,6 @@ router.post('/:id/edit', (req, res) => {
 
 
   
-  // Artwork Details Route
-router.get('/:id', (req, res) => {
-    const artworkId = req.params.id;
-  
-    // Query artwork details
-    const artworkSql = `SELECT * FROM artworks WHERE id = $1;`;
-    db.query(artworkSql, [artworkId], (err, artworkDbRes) => {
-      if (err) {
-        console.log(err);
-      }
-      const artwork = artworkDbRes.rows[0];
-  
-      res.render('artwork', { artwork });
-    });
-  });
-  
- // Edit Artwork Route
- router.get('/:id/edit', (req, res) => {
-  const artworkId = req.params.id;
-
-  // Query artwork details
-  const artworkSql = `SELECT * FROM artworks WHERE id = $1;`;
-  db.query(artworkSql, [artworkId], (err, artworkDbRes) => {
-    if (err) {
-      console.log(err);
-    }
-    const artwork = artworkDbRes.rows[0];
-
-    res.render('edit-artwork', { artwork });
-  });
-});
-
 router.post('/:id/edit', (req, res) => {
   const artworkId = req.params.id;
   const { title, artist_id, year, dimension_width, dimension_height, medium, genre, description, style } = req.body;

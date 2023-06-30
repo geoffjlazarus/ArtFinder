@@ -1,5 +1,7 @@
 # <ArtFinder>
-ArtFinder indexes various artists, artworks and movements. Navigate through our pages to discover new artists, their works and the groups they worked with.
+ArtFinder indexes and details various artists, artworks and movements.
+
+[View it live here](https://artfinder-hg3s.onrender.com/)
 
 # Screenshot
 
