@@ -9,6 +9,8 @@ ArtFinder indexes various artists, artworks and movements. Navigate through our 
 ![](https://i.imgur.com/tZmVTZI.png)
 ![](https://i.imgur.com/gy7jIS2.png)
 
+[View wireframes here](https://docdro.id/lPIcFf4)
+
 # Technologies Used
 
 - JavaScript
