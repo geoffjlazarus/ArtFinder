@@ -13,9 +13,17 @@
 <p><%= artwork.genre %></p>
 <p><%= artwork.style %></p>
 
-<a href="/artworks/<%= artwork.id %>/edit">Edit artwork</a>
 
-<form action="/artworks/<%= artwork.id %>" method="post">
-    <input type="hidden" name="_method" value="DELETE">
-    <button>Delete</button>
-</form>
+
+
+<% if (userId) {%>
+    <a href="/artworks/<%= artwork.id %>/edit">Edit artwork</a>
+
+    <form action="/artworks/<%= artwork.id %>" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <button>Delete</button>
+    </form>
+    <% } else {%>
+     <p></p>
+<%}%>
+

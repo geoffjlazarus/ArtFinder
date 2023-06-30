@@ -20,8 +20,17 @@
                 <a href="/artworks">artworks</a>
                 <a href="/movements">movements</a>
             </li>
-
-            <li><a href="/login">Log in</a></li>
+            <div class="log">
+                <% if (userId) {%>
+                    <p>Logged in as <%= user.email %></p>
+                        <form action="/logout" method="post">
+                            <input type="hidden" name="_method" value="delete">
+                            <button>Logout</button>
+                        </form>
+                    <% } else {%>
+                     <a href="/login">login</a>
+                    <%}%>
+            </div>
         </div>
     </ul>
     </nav>

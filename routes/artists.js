@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db')
 const methodOverride = require('method-override');
+const ensureLoggedIn = require('../middlewares/ensure_logged_in')
 
 // Add the method-override middleware
 router.use(methodOverride('_method'));
@@ -21,7 +22,7 @@ router.get('/', (req,res) => {
 
 
 // Add Artist Route
-router.get('/add', (req, res) => {
+router.get('/add', ensureLoggedIn, (req, res) => {
     res.render('add-artist');
 });
 
@@ -51,7 +52,7 @@ router.get('/:id', (req, res) => {
   });
   
   
-router.post('/', (req, res) => {
+router.post('/', ensureLoggedIn, (req, res) => {
      const { firstname, lastname, birth_year, death_year, gender, biography, nationality, artist_image_url, movements } = req.body;
 
      // Insert new artist into the database
@@ -69,7 +70,7 @@ router.post('/', (req, res) => {
  });
   
 
- router.delete('/:id', (req, res) => {
+ router.delete('/:id', ensureLoggedIn, (req, res) => {
     db.query(`DELETE FROM artists WHERE id = ${req.params.id};`, (err, dbRes) => {
       res.redirect("/")
     })
@@ -78,18 +79,7 @@ router.post('/', (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-router.post('/:id/edit', (req, res) => {
+router.post('/:id/edit', ensureLoggedIn, (req, res) => {
     const artistId = req.params.id;
     const { firstname, lastname, birth_year, death_year, gender, biography, nationality, artist_image_url, movements } = req.body;
 

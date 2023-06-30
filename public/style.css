@@ -11,7 +11,7 @@ body {
 
 .navbar {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     padding: 20px;
     background-color: white;
@@ -32,7 +32,6 @@ body {
     display: block;
     width: 50%;
     margin:0 auto;
-    
   }
 
 
@@ -41,7 +40,7 @@ body {
     display: flex;
     gap: 1em;
     font-size: 18px;
-    
+    float:right;
   }
   
   .menu li:hover {
@@ -68,12 +67,26 @@ body {
     display: block;
   }
 
+  .log {
+    /* float: right; */
+    display:inline-block;
+    margin-top:5px;
+  }
+
+  .log form {
+    display: inline;
+  }
+
+  .log p {
+    display: inline;
+  }
+
+  .log form button {
+    display: inline-block;
+  }
 
 
-
-
-
-header {
+/* header {
     background-color: white;
 }
 
@@ -96,7 +109,7 @@ header nav li {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}
+} */
 
 
 .card {
@@ -129,8 +142,6 @@ header nav li {
     justify-content: center;
 }
 
-
-
 form {
   width: 1000px;
 }
@@ -156,6 +167,7 @@ input[type=number] {
 button {
   padding: 12px 20px;
   margin: 8px 0;
+  display: inline;
 }
 
 .movements-class {

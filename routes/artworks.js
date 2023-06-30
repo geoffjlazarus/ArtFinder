@@ -63,7 +63,7 @@ router.get('/:id', (req, res) => {
   });
   
  // Edit Artwork Route
- router.get('/artworks/:id/edit', (req, res) => {
+ router.get('/:id/edit', (req, res) => {
   const artworkId = req.params.id;
 
   // Query artwork details
@@ -71,8 +71,6 @@ router.get('/:id', (req, res) => {
   db.query(artworkSql, [artworkId], (err, artworkDbRes) => {
     if (err) {
       console.log(err);
-      res.status(500).send('Internal Server Error');
-      return;
     }
     const artwork = artworkDbRes.rows[0];
 
@@ -80,7 +78,7 @@ router.get('/:id', (req, res) => {
   });
 });
 
-router.post('/artworks/:id/edit', (req, res) => {
+router.post('/:id/edit', (req, res) => {
   const artworkId = req.params.id;
   const { title, artist_id, year, dimension_width, dimension_height, medium, genre, description, style } = req.body;
 

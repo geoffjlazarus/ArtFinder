@@ -1,9 +1,11 @@
+require("dotenv").config()
 const db = require('./index.js')
 const bcrypt = require('bcrypt');
 let saltRounds = 10;
+console.log(process.env.DATABASE_URL)
 
-let plainTextPassword = 'password';
-let email = 'admin@admin.com'
+let plainTextPassword = 'pudding';
+let email = 'dt@ga.co'
 
 // gen a salt
 // hash/digest the pw

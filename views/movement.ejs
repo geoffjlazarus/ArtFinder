@@ -10,9 +10,14 @@ Artists
 Nationalities
 <p><%= movement.nationalities %></p>
 
-<a href="/movements/<%= movement.id %>/edit">Edit movement</a>
+<% if (userId) {%>
+    <a href="/movements/<%= movement.id %>/edit">Edit movement</a>
 
-<form action="/movements/<%= movement.id %>" method="post">
-    <input type="hidden" name="_method" value="DELETE">
-    <button>Delete</button>
-</form>
+    <form action="/movements/<%= movement.id %>" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <button>Delete</button>
+    </form>
+    <% } else {%>
+     <p></p>
+<%}%>
+
