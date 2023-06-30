@@ -26,7 +26,8 @@ ArtFinder indexes and details various artists, artworks and movements.
 
 # Getting Started
 
-Log in 
+Look around through the links and view artists, artworks and artists that interest you.
+Log in to modify content.
 
 # Next Steps
 
