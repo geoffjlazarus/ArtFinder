@@ -3,11 +3,11 @@ ArtFinder indexes various artists, artworks and movements. Navigate through our 
 
 # Screenshot
 
-![](/images/Screenshot%202023-06-30%20at%2010.50.39%20am.png)
-![](images/Screenshot%202023-06-30%20at%2010.50.50%20am.png)
-![](images/Screenshot%202023-06-30%20at%2010.51.00%20am.png)
-![](images/Screenshot%202023-06-30%20at%2010.51.14%20am.png)
-![](/images/Screenshot%202023-06-30%20at%2010.51.21%20am.png)
+![](https://i.imgur.com/GjQsKjw.jpg)
+![](https://i.imgur.com/MPWslar.jpg)
+![](https://i.imgur.com/AbFIJZj.jpg)
+![](https://i.imgur.com/tZmVTZI.png)
+![](https://i.imgur.com/gy7jIS2.png)
 
 # Technologies Used
 
